@@ -1,0 +1,87 @@
+<article class="card active" id="cf-card0" >
+
+      <h2>Contact<span class="cf-header-msg"></span><span class="edit">Edit section 🖉</span></h2>
+      <div class="cf-body">
+        <header>
+          <h3>How can we make contact with you?</h3>
+          <img class="cf-icon" src="images/delivery.png" alt="delivery icon">
+        </header>
+        <main>
+          <div>
+            <label for="cf-email"><span>e-mail: </span>
+          <input type="email" id="cf-email"  required autofocus autocomplete="email" placeholder="email address">
+        </label>
+        <label for="cf-tel"><span>tel: </span>
+          <input type="tel" id="cf-tel"  required autocomplete="tel" placeholder="telephone">
+        </label>
+        <button>next</button>
+          </div>
+        </main>
+      </div>
+    </article>
+    <article class="card" id="cf-card1">
+      <h2>Shipping<span class="cf-header-msg"></span><span class="edit">Edit section 🖉</span></h2>
+      <div class="cf-body">
+        <h3>Which address should we send your order to?</h3>
+        <img src="images/delivery.png" alt="delivery icon">
+        <label for="cf-name"><span>name</span>
+        <input id="cf-name" type="text" required autofocus autocomplete="name" placeholder="fullname" pattern="^[A-Z\u00C0-\u00DC][a-z\u00E0-\u00FC]+( [A-Z\u00C0-\u00DC][a-z\u00E0-\u00FC]+)+$"></label><br>
+        <label for="cf-address"><span>address: </span>
+          <input type="text" id="cf-address" size="37" required autocomplete="street-address" placeholder="address" pattern="/*/">
+        </label><br>
+        <label for="cf-postal"><span>postal code: </span>
+          <input type="text" id="cf-postal" max-length="4" size="4" required autocomplete="postal-code" placeholder="zipcode" pattern="^[0-9]{4}$">
+        </label>
+        <label for="cf-address"><span>city: </span>
+          <input type="text" id="cf-city"  required autocomplete="on" placeholder="city" pattern="^[A-z\u00C0-\u00DC][a-z\u00E0-\u00FC]+">
+        </label>
+        <button>next</button>
+      </div>
+    </article>
+    <article class="card" id="cf-card2">
+      <h2>Billing <span class="cf-header-msg"></span><span class="edit">Edit section 🖉</span></h2>
+      <div class="cf-body">
+        <h3>Which address should we use for billing?</h3>
+        <label for="cf-b-same">same address:
+          <input type="radio" id="fc-b-same" name="billing-address" value="same" checked>
+        </label>
+        <label for="cf-b-different">different address:
+          <input type="radio" id="cf-b-different" name="billing-address" value="different">
+        </label><br>
+        <label for="cf-name"><span>name</span>
+        <input id="cf-name" type="text" required autofocus autocomplete="name" placeholder="fullname" pattern="^[A-Z\u00C0-\u00DC][a-z\u00E0-\u00FC]+( [A-Z\u00C0-\u00DC][a-z\u00E0-\u00FC]+)+$" disabled></label><br>
+        <label for="cf-address"><span>address: </span>
+          <input type="text" id="cf-address" size="37" required autocomplete="street-address" placeholder="address" pattern="/*/" disabled>
+        </label><br>
+        <label for="cf-postal"><span>postal code: </span>
+          <input type="text" id="cf-postal" max-length="4" size="4" required autocomplete="postal-code" placeholder="zipcode" pattern="^[0-9]{4}$" disabled>
+        </label>
+        <label for="cf-address"><span>city: </span>
+          <input type="text" id="cf-city"  required autocomplete="on" placeholder="city" pattern="^[A-z\u00C0-\u00DC][a-z\u00E0-\u00FC]+" disabled>
+        </label>
+        <button>next</button>
+      </div>
+    </article>
+    <article class="card" id="cf-card3">
+      <h2>Payment<span class="cf-header-msg"></span><span class="edit">Edit section 🖉</span></h2>
+      <div class="cf-body">
+        <h3>How would you like to pay?</h3>
+        <label for="cf-cc-name"><span>card holder name: </span>
+          <input type="text" id="cf-cc-name" required autocomplete="cc-name" placeholder="card holder name" size="35">
+        </label><br>
+        <label for="cf-cc-number"><span>card number: </span>
+          <input type="text" id="cf-cc-number"  required autocomplete="cc-number" placeholder="card number" size="19" maxlength="19">
+        </label><br>
+        <h5>expiration date</h5>
+        <label for="cf-cc-exp-m"><span>expiration mounth: </span>
+          <input type="number" id="cf-cc-exp-m"  required autocomplete="cc-exp" placeholder="MM" size="2" min="1" max="12">
+        </label>
+        <label for="cf-cc-exp-y"><span>expiration mount</span>
+          <input type="number" id="cf-cc-exp-y"  required autocomplete="cc-exp" placeholder="YYYY" size="2" min="2017" max="3000">
+        </label>
+        <label for="cf-cc-cvc"><span>CVC code: </span>
+          <input id="cf-cc-cvc" type="number" size="4" max="9999" maxlength="4" placeholder="CVC code">
+        </label><br>
+        <input type="submit" value="Submit">
+      </div>
+    </article>

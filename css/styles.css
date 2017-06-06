@@ -1,0 +1,145 @@
+body {
+  width: 400px;
+  padding: 20px;
+}
+
+form {
+  background: #828282;
+  padding: 0 0 40px;
+}
+
+form header {
+  margin: 0;
+  padding: 0 20px;
+  background: #3784e1;
+  text-align: center;
+	height: 180px;
+}
+h2 {
+  vertical-align: ;
+  padding: 40px 0 0;
+  margin: 0;
+  font-size: 24px;
+  line-height: 30px;
+}
+header>img {
+  display: block;
+  padding: 0;
+  margin: 0 auto;
+}
+.cf-card{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.cf-body {
+  padding: 30px 0 40px 0;
+  margin: 0 40px;
+  border-bottom: 4px solid #fff;
+}
+main>div {
+  padding-bottom: 20px;
+  border-bottom: 3px solid #fff;
+}
+
+.cf-icon {
+  display: block;
+  margin: 0 auto;
+}
+
+
+h2 {
+  font-size: 20px;
+}
+
+h2, li, label, input, button {
+  color: #fff;
+  font-family: helvetica, sans-serif;
+}
+
+label {
+  display: block;
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+input::placeholder {
+  font-weight: 400;
+}
+input {
+  color : #545150;
+  font-weight: 700;
+}
+
+input, button {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+input[type=radio] {
+  width: auto;
+  margin: 10px;
+}
+
+button, input[type=submit] {
+	color: #fff;
+	font-size: 20px;
+	background: #3784e1;
+  border: 0px;
+}
+
+input:focus {
+  border: 3px solid #3784e1;
+}
+
+ul {
+  list-style-type: none;
+  padding: 10px 0;
+  margin: 0;
+}
+li {
+  box-sizing: border-box;
+  font-size: 18px;
+  position: relative;
+  display: block;
+  float: left;
+  width: 25%;
+  margin: 0;
+  padding: 5px 0;
+  text-align: center;
+  color: white;
+}
+li:hover {
+  background: #3784e1;
+  cursor: pointer;
+}
+li>span {
+  position: absolute;
+  top: -22px;
+  left: 40%;
+  background: #828282;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+input:disabled {
+	background: #A4A4A4;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.cf-25 {
+  width: 100px;
+  margin-right: 20px;
+}
+
+.cf-75 {
+  width: 200px;
+}
