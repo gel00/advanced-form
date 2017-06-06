@@ -85,7 +85,7 @@ var rawCardList = [
         }, {
           name : "Payment",
           question : "How would you like to pay?",
-          icon : "images/cardNumber.png",
+          icon : "images/payment.png",
 					controller: 2, //first 2 inputfield
           inputList : [
             {
