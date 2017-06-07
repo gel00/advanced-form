@@ -189,8 +189,8 @@ Card.prototype.createSubmit = function(){
 	submit.value = "Submit";
 	inputSection.appendChild(submit);
   submit.addEventListener("click", function(){
-		var result = self.validate();
-    if (result) {
+		self.validate();
+    if (self.valid) {
       alert("Your order has been sent.");
     }
   },false);
@@ -403,3 +403,26 @@ card3.inputList[0].elem.addEventListener("change", function() {
 card3.inputList[1].elem.addEventListener("change", function() {
  		card3.setDisabled(false);
 },false);
+card3.inputList[5].elem.addEventListener("input", function(){
+  console.log("triggered");
+  var elem = card3.inputList[5].elem;
+  var m, d, y;
+  switch (elem.value.length) {
+    case 2 :
+      m = elem.value;
+      elem.value += "-";
+      now = new Date();
+      break;
+    case 7 :
+      y = elem.value.slice(-4);
+      m = elem.value.slice(0,2);
+      var exp = new Date(y,m);
+      if(now > exp){
+        elem.setCustomValidity("Your card has been expired");
+      } else {
+        elem.setCustomValidity("");
+      }
+      break;
+  }
+
+})
