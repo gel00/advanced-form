@@ -145,6 +145,7 @@ function Card(obj) {
     self.inputList.push(new Input(input));
   });
   cardList.push(this);
+  this.valid = false;
 }
 Card.prototype.show = function() {
   question.textContent = this.question;
@@ -163,10 +164,11 @@ Card.prototype.show = function() {
 };
 
 Card.prototype.next = function() {
-  var result = this.validate();
-  if(result) {
+  this.validate();
+  if(this.valid) {
     loadNextCard();
   }
+  return this;
 };
 
 Card.prototype.createNext = function() {
@@ -210,7 +212,8 @@ Card.prototype.validate = function() {
       break;
     }
   }
-  return result;
+  this.valid = result;
+  return this;
 };
 
 Card.prototype.filterInput = function(){
@@ -346,12 +349,28 @@ function createProgressBar() {
       span.style.background = "#3784e1";
     }
     li.addEventListener("click",function(){
-      return function(e) {
         if(i != activeCard) {
-          loadNextCard(i);
+          if(i > activeCard) {
+            cardList[activeCard].validate();
+            var result = true, j = activeCard;
+            while (j < i) {
+              if (!cardList[j].valid) {
+                result = false;
+                var next = document.getElementById("cf-next");
+                next.click();
+                break;
+              }
+              j++;
+            }
+            if(result) {
+              loadNextCard(i);
+            }
+
+          } else {
+            loadNextCard(i);
+          }
         }
-      };
-    }(),false);
+    },false);
   });
 }
 
