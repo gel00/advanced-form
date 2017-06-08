@@ -147,24 +147,40 @@ function Card(obj) {
   cardList.push(this);
   this.valid = false;
 }
+
+function loadInputs(index){
+  var xhttp = new XMLHttpRequest(), url;
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      inputSection.innerHTML = this.responseText;
+      cardList[index].createButton();
+    }
+  };
+  url = "card" + index + ".html";
+  xhttp.open("GET", url, true);
+  xhttp.send();
+}
+
 Card.prototype.show = function() {
   question.textContent = this.question;
   cardIcon.setAttribute("src", this.icon);
   cardIcon.setAttribute("alt", this.name);
   inputSection.innerHTML = "";
-  this.inputList.forEach(function(input){
+  loadInputs(this.index);
+  /*this.inputList.forEach(function(input){
     if (input.elem.type == "radio") {
       input.createLabel().appendChild(input.elem);
     } else {
       inputSection.appendChild(input.elem);
     }
     input.loadValue();
-  });
+  });*/
 	return this;
 };
 
 Card.prototype.next = function() {
   this.validate();
+  console.log(this.valid);
   if(this.valid) {
     loadNextCard();
   }
@@ -212,7 +228,7 @@ Card.prototype.validate = function() {
       break;
     }
   }
-  this.valid = result;
+  this.valid = true;
   return this;
 };
 
@@ -257,8 +273,7 @@ function loadNextCard(num) {
   activeCard = num;
   mileStones.item(activeCard).style.background = "#3784e1";
   cardList[activeCard]
-		.show()
-		.createButton();
+		.show();
 }
 
 function Input(obj) {
@@ -376,7 +391,7 @@ function createProgressBar() {
 
 
 
-var card0 = new Card(rawCardList[0]).show().createNext();
+var card0 = new Card(rawCardList[0]).show();
 createProgressBar();
 var card1 = new Card(rawCardList[1]);
 var card2 = new Card(rawCardList[2]);
