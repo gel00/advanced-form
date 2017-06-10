@@ -1,25 +1,28 @@
 body {
-  width: 400px;
-  padding: 20px;
+
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 form {
+  font-size: 100px;
+  max-width: 400px;
   background: #828282;
   padding: 0 0 40px;
 }
 
 form header {
   margin: 0;
-  padding: 0 20px;
+  padding: 0 5% 10px;
   background: #3784e1;
   text-align: center;
-	height: 180px;
 }
 h2 {
   vertical-align: ;
-  padding: 40px 0 0;
+  padding: 10% 0 0;
   margin: 0;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 30px;
 }
 header>img {
@@ -34,23 +37,15 @@ header>img {
 }
 
 .cf-body {
-  padding: 30px 0 40px 0;
-  margin: 0 40px;
+  font-size: 37px;
+  padding: 7.5% 0 10% 0;
+  margin: 0 10%;
   border-bottom: 4px solid #fff;
-}
-main>div {
-  padding-bottom: 20px;
-  border-bottom: 3px solid #fff;
 }
 
 .cf-icon {
   display: block;
   margin: 0 auto;
-}
-
-
-h2 {
-  font-size: 20px;
 }
 
 h2, li, label, input, button {
@@ -75,8 +70,8 @@ input {
 input, button {
   box-sizing: border-box;
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
+  padding: 3.125%;
+  margin: 3.125% 0;
   border-radius: 5px;
 }
 input[type=radio] {
@@ -102,13 +97,13 @@ ul {
 }
 li {
   box-sizing: border-box;
-  font-size: 18px;
+  font-size: 18%;
   position: relative;
   display: block;
   float: left;
   width: 25%;
   margin: 0;
-  padding: 5px 0;
+  padding: 1.25% 0;
   text-align: center;
   color: white;
 }
@@ -116,6 +111,7 @@ li:hover {
   background: #3784e1;
   cursor: pointer;
 }
+/*----process-bar----*/
 li>span {
   position: absolute;
   top: -22px;
@@ -136,10 +132,10 @@ input:disabled {
 }
 
 .cf-25 {
-  width: 100px;
-  margin-right: 20px;
+  width: 31.25%;
+  margin-right: 6.25%;
 }
 
 .cf-75 {
-  width: 200px;
+  width: 62.5%;
 }
