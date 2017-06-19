@@ -61,6 +61,23 @@ label {
 }
 input::placeholder {
   font-weight: 400;
+  color: #AFAFAF;
+}
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-weight: 400;
+  color: #AFAFAF;
+}
+input::-moz-placeholder { /* Firefox 19+ */
+  font-weight: 400;
+  color: #AFAFAF;
+}
+input:-ms-input-placeholder { /* IE 10+ */
+  font-weight: 400;
+  color: #AFAFAF;
+}
+input:-moz-placeholder { /* Firefox 18- */
+  font-weight: 400;
+  color: #AFAFAF;
 }
 input {
   color : #545150;
